@@ -1,0 +1,10 @@
+{
+    "manifest_version": 1,
+    "name": "Example plugin",
+    "description": "Example plugin implemented as a shell script. This plugin flips the video upside down.",
+    "type": "video",
+    "resources": {
+        "cpus": 1,
+        "memory": 1024
+    }
+}
