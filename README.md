@@ -18,12 +18,12 @@ Build the Docker image
 docker build -t streamrun-example-plugin-sh:0.1 .
 ```
 
-Start a TCP server that will receive buffers and display the video in an autovideosink.
+Start a TCP server that will receive buffers from your plugin and display them in an autovideosink.
 ```bash
 gst-launch-1.0 tcpserversrc host=0.0.0.0 port=3000 ! gdpdepay ! autovideosink
-````
+```
 
-Run the Docker image with videotestsrc as input and send output to the TCP server started above
+Run the Docker image that produces video using videotestsrc, passes the video through plugin.sh, and sends the GDP-payload buffers to the TCP server started above.
 ```bash
 docker run -it --rm \
     -e STREAM_IN="videotestsrc is-live=true ! video/x-raw, width=1920, height=1080, framerate=60/1, format=I420" \
