@@ -1,6 +1,11 @@
 # example-plugin-sh
 Example Streamrun plugin implemented as a shell script using gst-launch-1.0
 
+## Concept
+Streamrun plugins run in isolated Docker containers. The plugin receives audio or video buffers from the Streamrun platform, manipulates them as needed, and sends them back to the platform. Communication is done over TCP with a GStreamer Data Protocol (GDP) payload. The Streamrun platform automatically handles latency and synchronization issues.
+
+Plugins are deployed by copying the manifest.json file to the Streamrun editor.
+
 ## Run the plugin locally
 Install the latest GStreamer and run
 ```bash
