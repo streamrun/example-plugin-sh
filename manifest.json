@@ -1,7 +1,8 @@
 {
     "manifest_version": 1,
     "name": "Example plugin",
-    "description": "Example plugin implemented as a shell script. This plugin flips the video upside down.",
+    "description": "Example Streamrun plugin that flips the video upside down, implemented as a shell script using gst-launch-1.0.",
+    "image": "docker.io/streamrun/example-plugin-sh:0.1",
     "type": "video",
     "resources": {
         "cpus": 1,
